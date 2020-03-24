@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+* {
+    font-family: 'Roboto',
+        sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-pacifico {
+    font-family: 'Pacifico',
+        cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-righteous {
+    font-family: 'Righteous',
+        cursive;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text-tomatoes {
+    color: tomato;
 }
 
-.App-link {
-  color: #61dafb;
+.overflow-hidden-x {
+    overflow-x: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* header styles */
+.brand-logo {
+    text-align: center;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
+}
+
+.search-wrapper {
+    position: relative;
+
+}
+
+.search-wrapper input {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #eee;
+    padding: 4px 7px;
+    text-transform: capitalize;
+}
+
+.search-wrapper input:focus {
+    outline: none;
+}
+
+.search-wrapper:hover~input {
+    width: 100px;
+    background-color: white;
+}
+
+.search-wrapper button {
+    outline: none;
+    border: none;
+    background-color: tomato;
+    color: white;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 13px;
+}
+
+/* Recipe Card */
+.img-wrapper {
+    width: 300px;
+    height: 250px;
+    /* background-color: turquoise; */
+}
+
+.img-wrapper img {
+    height: 100%;
+    width: 100%;
+}
+
+.card-wrapper {
+    box-shadow: 6px 2px 4px rgba(0, 0, 0, .3);
+}
+
+.card-title {
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, .6);
+}
+
+.btn-view,
+.btn-url {
+    font-size: 14px;
+    border: none;
+    background-color: transparent;
+    transition: all 0.4s ease-in-out;
+    padding: 3px 6px;
+}
+
+.btn-view {
+    background-color: tomato;
+    color: white;
+}
+
+.btn-url {
+    background-color: transparent;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, .2);
+    color: rgb(250, 81, 51);
+}
+
+.btn-view:hover,
+.btn-url:hover {
+    transform: translateY(-4px);
+    transform: scale(1.02);
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.btn-view:hover {
+    background-color: transparent;
+    color: tomato;
+}
+
+.btn-view:focus,
+.btn-url:focus {
+    transform: translateY(-1px);
+    transform: scale(1);
+    outline: none;
+}
+
+/* media queries */
+@media screen and (max-width: 1197px) {
+    .img-wrapper {
+        width: 305px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .img-wrapper {
+        width: 370px;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .img-wrapper {
+        width: 330px;
+    }
+}
+
+@media screen and (max-width: 721px) {
+    .img-wrapper {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 571px) {
+    .img-wrapper {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 391px) {
+    .img-wrapper {
+        width: 300px;
+    }
 }
